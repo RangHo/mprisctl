@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/env python3
 
 import os
 import sys
@@ -328,8 +328,7 @@ def replace_block(original: str, block_name: str, replace_str: str = None):
     return result
 
 
-if __name__ == "__main__":
-
+def main():
     parser = argparse.ArgumentParser(
         description="Control MPRIS players from command line."
     )
@@ -409,3 +408,6 @@ if __name__ == "__main__":
 
     elif args.command == 'help':
         parser.print_help()
+
+if __name__ == "__main__":
+    main()
